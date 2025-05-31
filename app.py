@@ -77,6 +77,12 @@ make.biom(shared=final.opti_mcc.shared, constaxonomy=final.opti_mcc.0.03.cons.ta
             with open("final.opti_mcc.0.03.cons.taxonomy", "rb") as f:
                 st.download_button("Descargar taxonomía",
                                    f, "final_taxonomy.txt")
+        biom_path = "data/final.opti_mcc.0.03.biom"
+        if os.path.exists(biom_path):
+            with open(biom_path, "rb") as f:
+                st.download_button("Descargar archivo .biom",
+                                   f, file_name="final_output.biom")
 
         # Limpieza opcional
-        shutil.rmtree(input_dir)
+        if st.checkbox("Eliminar archivos subidos después de ejecutar"):
+            shutil.rmtree(input_dir)
