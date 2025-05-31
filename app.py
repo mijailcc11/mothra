@@ -35,7 +35,7 @@ align.seqs(fasta=stability.trim.contigs.good.unique.fasta, reference=silva.bacte
 summary.seqs(fasta=stability.trim.contigs.good.unique.align, count=stability.trim.contigs.good.count_table)
 screen.seqs(fasta=stability.trim.contigs.good.unique.align, count=stability.trim.contigs.good.count_table, start=13144, end=25287, minlength=250, maxlength=500, maxambig=0, maxhomop=8)
 summary.seqs(fasta=current, count=current)
-filter.seqs(fasta=stability.trim.contigs.good.unique.3good.align, vertical=T, trump=.)
+filter.seqs(fasta=stability.trim.contigs.good.unique.good.align, vertical=T, trump=.)
 unique.seqs(fasta=stability.trim.contigs.good.unique.good.filter.fasta, count=stability.trim.contigs.good.good.count_table)
 pre.cluster(fasta=stability.trim.contigs.good.unique.good.filter.unique.fasta, count=stability.trim.contigs.good.unique.good.filter.count_table, diffs=2)
 chimera.vsearch(fasta=stability.trim.contigs.good.unique.good.filter.unique.precluster.fasta, count=stability.trim.contigs.good.unique.good.filter.unique.precluster.count_table, dereplicate=t)
