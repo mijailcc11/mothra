@@ -3,7 +3,7 @@ import subprocess
 import os
 import shutil
 
-st.title("Pipeline automatizada de Mothur")
+st.title("mothur's automated 16S pipeline (still under test)")
 
 # Crear carpeta temporal
 input_dir = "data"
